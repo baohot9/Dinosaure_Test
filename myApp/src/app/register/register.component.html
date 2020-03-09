@@ -1,0 +1,38 @@
+<div style="text-align:center">
+    <h1 mat-dialog-title>New Dinosaure</h1>
+    <div mat-dialog-content>
+        <div class="example-container">
+
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Nom" [(ngModel)]="data.name">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Password" [(ngModel)]="data.pw">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Age" [(ngModel)]="data.age">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Famille" [(ngModel)]="data.famille">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Race" [(ngModel)]="data.race">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="mat-custom">
+                <input matInput placeholder="Nourriture" [(ngModel)]="data.nourriture">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button  (click)="fetch_post()" color="primary" >Register</button>
+        <button mat-raised-button (click)="cancelFunction()">Cancel</button>
+    </div>
+
+
+</div>

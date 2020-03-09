@@ -1,0 +1,40 @@
+<p></p>
+<div style="text-align:center" *ngIf="!logout">
+    
+        <h1>Log in </h1>
+
+        <mat-form-field appearance="outline" class="mat-custom">
+            <input matInput placeholder="Nom" [(ngModel)]="name">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <p></p>
+
+        <mat-form-field appearance="outline" class="mat-custom">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password"  [(ngModel)]="pw">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+
+
+    <p></p>
+
+    <button (click)="login(name, pw)" mat-raised-button>Login</button>
+
+    <p></p>
+
+    <a mat-button routerLink="." (click)="registerFunction()">
+        <h3> New user? Register to create your account </h3>
+    </a>
+</div>
+
+
+
+<div style="text-align:center" *ngIf="logout">
+    <h1> Are you sure you wish to logout? </h1>
+    <button (click)="logoutFunction()" mat-raised-button color="warn">Log out</button>
+    <button (click)="cancelFunction()" mat-raised-button>Cancel</button>
+</div>
